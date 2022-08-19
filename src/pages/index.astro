@@ -1,23 +1,33 @@
 ---
 import Layout from '@/layouts/Layout.astro';
+import { Icon } from "astro-icon";
 ---
 
 <Layout title="Humphrey">
 	<main>
 		<section class="py-5">
-			Hi! I'm Humphrey. Hopeful software engineer. Year 2 Computer Science major at the National University of Singapore.
+			Hi! I'm Humphrey. Year 2 Computer Science major at the National University of Singapore.
 		</section>
 		<section>
 			<h2 class="font-headline uppercase after:w-full after:h-[2px] after:bg-slate-400 after:block flex after:m-3">Projects</h2>
 			<div>
 				<h3 class="font-headline py-2 after:w-6 after:h-[2px] after:block after:bg-red-400">nomp</h3>
 				<img src="/nomp.png" alt="Nomp"/>
+				<div class="flex gap-2 py-2">
+					<Icon name="logos:react" className="h-6"/>
+					<Icon name="logos:nodejs-icon" className="h-6"/>
+					<Icon name="cib:socket-io" className="h-6"/>
+			  </div>
 				<p>Built for CP2106 Orbital</p>
 			</div>			
 			<div>
 				<h3 class="font-headline py-2 after:w-12 after:h-[2px] after:block after:bg-red-400">onlyfoods</h3>
 				<img src="/onlyfoods.png" alt="OnlyFoods"/>
 				<p>Built with Next.js</p>
+				<Icon name="logos:nextjs" className="h-6"/>
+				<Icon name="logos:typescript-icon" className="h-6"/>				
+				<Icon name="simple-icons:chakraui" className="h-6"/>
+				<Icon name="logos:tailwindcss-icon" className="h-6"/>
 			</div>
 		</section>
 	</main>
