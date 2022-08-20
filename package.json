@@ -1,11 +1,12 @@
 {
-  "name": "@example/basics",
-  "version": "0.0.1",
+  "name": "humphrey-site",
+  "version": "1.0.0",
+  "description": "My site!",
   "private": true,
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro check && tsc --noEmit && astro build",
+    "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
