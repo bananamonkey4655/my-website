@@ -1,0 +1,44 @@
+---
+import { Icon } from "astro-icon";
+
+export interface Props {
+  title: string;
+  technologies: string[];
+  image: string;
+  href: string;
+}
+
+const { title, technologies, image, href } = Astro.props as Props;
+---
+
+<div class="flex flex-col">
+  <div>
+    <h3
+      class="font-headline inline-block py-2 after:w-3/4 after:h-[2px] after:block after:bg-red-400"
+    >
+      {title}
+    </h3>
+  </div>
+
+  <img src={image} alt={title} />
+
+  <div class="flex gap-2 p-2 h-10 w-full">
+    {technologies.map((tech) => <Icon name={tech} />)}
+  </div>
+
+  <div class="text-sm flex flex-col gap-2 bg-slate-100 p-4">
+    <slot />
+  </div>
+
+  <div
+    class="bg-red-300 inline-block uppercase font-headline px-1 mt-3 self-end"
+  >
+    <a href={href} target="_blank" rel="noopener noreferrer">View more</a>
+  </div>
+</div>
+
+<style lang="css">
+  [astro-icon] {
+    height: 1.5rem;
+  }
+</style>

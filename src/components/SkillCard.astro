@@ -1,0 +1,30 @@
+---
+import { Icon } from "astro-icon";
+import type { Tech } from "@/lib";
+
+export interface Props {
+  title: string;
+  technologies: Tech[];
+}
+
+const { title, technologies } = Astro.props as Props;
+---
+
+<div>
+  <h3
+    class="font-headline inline-block py-2 after:w-3/4 after:h-[2px] after:block after:bg-red-400"
+  >
+    {title}
+  </h3>
+</div>
+
+<ul class="grid grid-cols-4 gap-10 items-center py-5">
+  {
+    technologies.map((tech) => (
+      <li class="text-center">
+        <Icon name={tech.icon} aria-label={tech.name} class="h-10 m-auto" />
+        <span class="font-headline font-semibold text-xs">{tech.name}</span>
+      </li>
+    ))
+  }
+</ul>
