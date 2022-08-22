@@ -6,13 +6,18 @@ import { technologies, nompStack, onlyFoodsStack, portfolioStack } from "@/lib";
 ---
 
 <Layout title="Humphrey">
-  <main class="px-6 relative m-auto max-w-lg">
+  <main class="px-6 relative w-full m-auto max-w-lg">
     <section
       id="about"
-      class="pt-20 h-screen flex flex-col gap-10 items-center"
+      class="h-screen w-full flex flex-col gap-10 items-center justify-center"
     >
-      <p>Hi! I'm Humphrey!</p>
-      <img src="/saulgoodman.jpg" alt="Saul Goodman" class="h-full" />
+      <p class="font-headline text-2xl">
+        Hi! I'm <span
+          class="inline-block py-2 after:w-3/4 after:h-[2px] after:block after:bg-red-400"
+          >Humphrey
+        </span>!
+      </p>
+      <img src="/santa-hat.png" alt="Santa" class="w-60 lg:w-full" />
     </section>
 
     <section id="projects" class="pt-20">
