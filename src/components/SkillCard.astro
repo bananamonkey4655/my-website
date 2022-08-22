@@ -23,7 +23,9 @@ const { title, technologies } = Astro.props as Props;
     technologies.map((tech) => (
       <li class="text-center">
         <Icon name={tech.icon} aria-label={tech.name} class="h-10 m-auto" />
-        <span class="font-headline font-semibold text-xs">{tech.name}</span>
+        <span class="font-headline font-semibold text-xs whitespace-nowrap">
+          {tech.name}
+        </span>
       </li>
     ))
   }
