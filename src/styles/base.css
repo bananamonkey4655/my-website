@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .link {
+    @apply relative after:absolute after:w-full after:h-[2px] after:bottom-0 after:left-0 after:bg-slate-600 after:duration-300 after:scale-x-0 after:origin-bottom-left after:ease-out hover:after:scale-x-100 hover:after:origin-bottom-left;
+  }
+}
