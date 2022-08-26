@@ -27,7 +27,10 @@ const { title, technologies, image, href } = Astro.props as Props;
     {
       technologies.map((tech) => {
         return (
-          <li class="text-center tooltip expand" data-title={tech.fancy}>
+          <li
+            class="text-center tooltip expand hover:-translate-y-2 transition-transform duration-200"
+            data-title={tech.fancy}
+          >
             <Icon name={tech.icon} />
           </li>
         );

@@ -66,7 +66,7 @@ export const technologies: Tech[] = [
     description: "CSS component library for fast development 🏎️",
   },
   {
-    name: "ES6",
+    name: "JavaScript",
     fancy: "JavaScript",
     icon: "logos:javascript",
     skill: "language",
@@ -92,6 +92,16 @@ export const technologies: Tech[] = [
     icon: "logos:mongodb",
     skill: "tool",
     description: "NoSQL document-oriented database 💾",
+  },
+  {
+    name: "HTML",
+    icon: "logos:html-5",
+    skill: "language",
+  },
+  {
+    name: "CSS",
+    icon: "logos:css-3",
+    skill: "language",
   },
 ];
 

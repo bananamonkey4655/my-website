@@ -6,21 +6,41 @@ import { technologies, nompStack, onlyFoodsStack, portfolioStack } from "@/lib";
 ---
 
 <Layout title="Humphrey">
-  <main class="px-6 relative w-full m-auto max-w-lg">
+  <main class="px-6 relative w-full m-auto md:max-w-lg xl:max-w-6xl">
     <section
-      id="about"
-      class="h-screen w-full flex flex-col gap-10 items-center justify-center"
+      class="card h-screen w-full flex flex-col gap-10 items-center justify-center"
+      id="home"
     >
       <p class="font-headline text-2xl">
-        Hi! I'm <span
+        <span>Hi! I'm</span>
+
+        <span
           class="inline-block py-2 after:w-3/4 after:h-[2px] after:block after:bg-red-400"
           >Humphrey
         </span>!
       </p>
-      <img src="/santa-hat.png" alt="Santa" class="w-60 lg:w-full" />
+
+      <img src="/santa-hat.png" alt="Santa" class="w-60 lg:w-full max-w-sm" />
     </section>
 
-    <section id="projects" class="pt-20">
+    <section id="about" class="card pt-20">
+      <h2
+        class="font-headline font-bold text-xl uppercase after:w-full after:h-[2px] after:bg-slate-400 after:block flex after:m-3"
+      >
+        About
+      </h2>
+
+      <div class="text-sm flex flex-col gap-2 font-medium xl:text-lg">
+        <p>
+          I'm a 2nd year Computer Science major @ the National University of
+          Singapore! 🎓
+        </p>
+        <p>On a mission to create meaningful software.</p>
+        <p>Current obsession: Succession 📺</p>
+      </div>
+    </section>
+
+    <section id="projects" class="card pt-20">
       <h2
         class="font-headline font-bold text-xl uppercase after:w-full after:h-[2px] after:bg-slate-400 after:block flex after:m-3"
       >
@@ -39,10 +59,12 @@ import { technologies, nompStack, onlyFoodsStack, portfolioStack } from "@/lib";
           >
             Built for CP2106 Independent Software Development Project (Orbital)
           </h3>
+
           <p>
             A web app to help a group of friends decide where to eat using a
             Tinder-like interface to vote
           </p>
+
           <p>Uses Socket.io for real-time voting feedback.</p>
         </ProjectCard>
       </div>
@@ -55,11 +77,14 @@ import { technologies, nompStack, onlyFoodsStack, portfolioStack } from "@/lib";
           href="https://github.com/bananamonkey4655/onlyfoods"
         >
           <p>A web app to search for restaurant listings using keywords.</p>
+
           <p>
-            Uses SSG (Static Site Generation) to pre-render only a few paths at
-            build time, while server-rendering pages on demand if the path
-            doesn't exist. Pages are cached and served as static sites for
-            future requests.
+            Uses SSG (Static Site Generation) to pre-render only a few listings
+            at build time, while server-rendering listings on demand if they
+            don't exist.
+          </p>
+          <p>
+            Pages are cached and served as static sites for future requests.
           </p>
         </ProjectCard>
       </div>
@@ -76,7 +101,7 @@ import { technologies, nompStack, onlyFoodsStack, portfolioStack } from "@/lib";
       </div>
     </section>
 
-    <section>
+    <section class="card" id="skills">
       <h2
         class="font-headline font-bold text-xl uppercase after:w-full after:h-[2px] after:bg-slate-400 after:block flex after:m-3"
       >
@@ -99,16 +124,52 @@ import { technologies, nompStack, onlyFoodsStack, portfolioStack } from "@/lib";
       />
     </section>
 
-    <section id="contact" class="pb-40">
+    <section id="contact" class="card pb-40">
       <h2
         class="font-headline font-bold text-xl uppercase after:w-full after:h-[2px] after:bg-slate-400 after:block flex after:m-3"
       >
         Contact
       </h2>
+
       <p>Get in touch!</p>
     </section>
   </main>
 </Layout>
+
+<script>
+  const cards = document.querySelectorAll(".card");
+  console.log(cards);
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        entry.target.classList.toggle("show", entry.isIntersecting);
+
+        if (entry.isIntersecting) {
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  cards.forEach((card) => {
+    observer.observe(card);
+  });
+</script>
+
+<style>
+  .card {
+    transform: translateY(100px);
+    transition: 250ms;
+    opacity: 0;
+  }
+
+  .card.show {
+    transform: translateY(0);
+    opacity: 1;
+  }
+</style>
 
 <!-- <style>
 	:root {
