@@ -22,10 +22,14 @@ const { title, technologies } = Astro.props as Props;
   {
     technologies.map((tech) => (
       <li
-        class="text-center tooltip expand"
+        class="text-center"
         data-title={tech.description ?? "Nothing found! Damn it."}
       >
-        <Icon name={tech.icon} aria-label={tech.name} class="h-10 m-auto" />
+        <Icon
+          name={tech.icon}
+          aria-label={tech.name}
+          class="h-10 m-auto hover:-translate-y-2 transition-transform duration-200"
+        />
         <span class="font-headline font-semibold text-xs whitespace-nowrap">
           {tech.name}
         </span>
@@ -33,9 +37,9 @@ const { title, technologies } = Astro.props as Props;
     ))
   }
 </ul>
-
+<!-- 
 <style>
-  .tooltip {
+ .tooltip {
     position: relative;
   }
 
@@ -86,5 +90,5 @@ const { title, technologies } = Astro.props as Props;
   }
   .tooltip.expand:hover:after {
     transition: all 0.2s 0.1s ease-in-out;
-  }
-</style>
+  } 
+</style> -->

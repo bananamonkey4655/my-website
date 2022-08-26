@@ -1,9 +1,10 @@
 ---
 import { Icon } from "astro-icon";
+import type { Tech } from "@/lib";
 
 export interface Props {
   title: string;
-  technologies: string[];
+  technologies: Tech[];
   image: string;
   href: string;
 }
@@ -22,9 +23,17 @@ const { title, technologies, image, href } = Astro.props as Props;
 
   <img src={image} alt={title} />
 
-  <div class="flex gap-2 p-2 h-10 w-full">
-    {technologies.map((tech) => <Icon name={tech} />)}
-  </div>
+  <ul class="flex gap-2 p-2 h-10 w-full">
+    {
+      technologies.map((tech) => {
+        return (
+          <li class="text-center tooltip expand" data-title={tech.fancy}>
+            <Icon name={tech.icon} />
+          </li>
+        );
+      })
+    }
+  </ul>
 
   <div class="text-sm flex flex-col gap-2 bg-slate-100 p-4">
     <slot />
@@ -40,5 +49,58 @@ const { title, technologies, image, href } = Astro.props as Props;
 <style lang="css">
   [astro-icon] {
     height: 1.5rem;
+  }
+
+  .tooltip {
+    position: relative;
+  }
+
+  .tooltip:before,
+  .tooltip:after {
+    display: block;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    z-index: 999;
+  }
+
+  .tooltip:after {
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid rgba(0, 0, 0, 0.75);
+    border-left: 6px solid transparent;
+    content: "";
+    height: 0;
+    top: 25px;
+    left: 7px;
+    width: 0;
+  }
+  .tooltip:before {
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 2px;
+    color: #fff;
+    content: attr(data-title);
+    font-size: 14px;
+    padding: 6px 10px;
+    top: 31px;
+    /* left: 15px; */
+  }
+
+  .tooltip.expand:before {
+    transform: scale3d(0.2, 0.2, 1);
+    transition: all 0.2s ease-in-out;
+  }
+
+  .tooltip.expand:after {
+    transform: translate3d(0, 6px, 0);
+    transition: all 0.1s ease-in-out;
+  }
+
+  .tooltip.expand:hover:before,
+  .tooltip.expand:hover:after {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+  .tooltip.expand:hover:after {
+    transition: all 0.2s 0.1s ease-in-out;
   }
 </style>
