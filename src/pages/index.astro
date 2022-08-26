@@ -23,7 +23,7 @@ import { technologies, nompStack, onlyFoodsStack, portfolioStack } from "@/lib";
       <img src="/santa-hat.png" alt="Santa" class="w-60 lg:w-full max-w-sm" />
     </section>
 
-    <section id="about" class="card pt-20">
+    <section id="about" class="card pb-10">
       <h2
         class="font-headline font-bold text-xl uppercase after:w-full after:h-[2px] after:bg-slate-400 after:block flex after:m-3"
       >
@@ -41,7 +41,7 @@ import { technologies, nompStack, onlyFoodsStack, portfolioStack } from "@/lib";
       </div>
     </section>
 
-    <section id="projects" class="card pt-20">
+    <section id="projects" class="card">
       <h2
         class="font-headline font-bold text-xl uppercase after:w-full after:h-[2px] after:bg-slate-400 after:block flex after:m-3"
       >
@@ -107,7 +107,7 @@ import { technologies, nompStack, onlyFoodsStack, portfolioStack } from "@/lib";
 
     <section class="card" id="skills">
       <h2
-        class="font-headline font-bold text-xl uppercase after:w-full after:h-[2px] after:bg-slate-400 after:block flex after:m-3"
+        class="flex font-headline font-bold text-xl uppercase after:w-full after:h-[2px] after:bg-slate-400 after:block after:m-3"
       >
         Skills
       </h2>
@@ -168,6 +168,8 @@ import { technologies, nompStack, onlyFoodsStack, portfolioStack } from "@/lib";
     transform: translateY(100px);
     transition: 250ms;
     opacity: 0;
+    padding-top: 70px;
+    margin-top: -70px;
   }
 
   .card.show {
