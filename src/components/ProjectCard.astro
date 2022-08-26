@@ -6,16 +6,17 @@ export interface Props {
   title: string;
   technologies: Tech[];
   image: string;
-  href: string;
+  link: string;
+  github: string;
 }
 
-const { title, technologies, image, href } = Astro.props as Props;
+const { title, technologies, image, link, github } = Astro.props as Props;
 ---
 
 <div class="flex flex-col">
   <div>
     <h3
-      class="font-headline inline-block py-2 after:w-3/4 after:h-[2px] after:block after:bg-red-400"
+      class="font-headline inline-block py-2 after:w-3/4 after:h-[2px] after:block after:bg-red-400 md:text-xl"
     >
       {title}
     </h3>
@@ -42,14 +43,17 @@ const { title, technologies, image, href } = Astro.props as Props;
     <slot />
   </div>
 
-  <div
-    class="bg-red-300 inline-block uppercase font-headline px-1 mt-3 self-end link"
-  >
-    <a href={href} target="_blank" rel="noopener noreferrer">View more</a>
+  <div class="self-end flex gap-3 xl:gap-5">
+    <div class="bg-red-300 inline-block uppercase font-headline px-1 mt-3 link">
+      <a href={link} target="_blank" rel="noopener noreferrer">Visit</a>
+    </div>
+    <div class="bg-red-300 inline-block uppercase font-headline px-1 mt-3 link">
+      <a href={github} target="_blank" rel="noopener noreferrer">View more</a>
+    </div>
   </div>
 </div>
 
-<style lang="css">
+<style>
   [astro-icon] {
     height: 1.5rem;
   }

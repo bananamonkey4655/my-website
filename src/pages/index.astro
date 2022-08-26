@@ -6,7 +6,7 @@ import { technologies, nompStack, onlyFoodsStack, portfolioStack } from "@/lib";
 ---
 
 <Layout title="Humphrey">
-  <main class="px-6 relative w-full m-auto md:max-w-lg xl:max-w-6xl">
+  <main class="px-6 relative w-full m-auto md:max-w-lg xl:max-w-5xl">
     <section
       class="card h-screen w-full flex flex-col gap-10 items-center justify-center"
       id="home"
@@ -35,7 +35,8 @@ import { technologies, nompStack, onlyFoodsStack, portfolioStack } from "@/lib";
           I'm a 2nd year Computer Science major @ the National University of
           Singapore! 🎓
         </p>
-        <p>On a mission to create meaningful software.</p>
+        <p>Developer by day, fishkeeper by night 🐟🐠</p>
+        <p>On a mission to create meaningful software! 💻</p>
         <p>Current obsession: Succession 📺</p>
       </div>
     </section>
@@ -52,7 +53,8 @@ import { technologies, nompStack, onlyFoodsStack, portfolioStack } from "@/lib";
           title="Nomp"
           technologies={nompStack}
           image="/nomp.png"
-          href="https://github.com/bananamonkey4655/nomp"
+          link="https://orbital-nomp.netlify.app/"
+          github="https://github.com/bananamonkey4655/nomp"
         >
           <h3
             class="text-red-500 font-semibold text-xs uppercase font-headline"
@@ -74,7 +76,8 @@ import { technologies, nompStack, onlyFoodsStack, portfolioStack } from "@/lib";
           title="OnlyFoods"
           technologies={onlyFoodsStack}
           image="/onlyfoods.png"
-          href="https://github.com/bananamonkey4655/onlyfoods"
+          link="https://onlyfoods-blue.vercel.app/"
+          github="https://github.com/bananamonkey4655/onlyfoods"
         >
           <p>A web app to search for restaurant listings using keywords.</p>
 
@@ -94,7 +97,8 @@ import { technologies, nompStack, onlyFoodsStack, portfolioStack } from "@/lib";
           title="My website"
           technologies={portfolioStack}
           image="/cool-example.jpg"
-          href="https://github.com/bananamonkey4655/astro-test"
+          link="/"
+          github="https://github.com/bananamonkey4655/astro-test"
         >
           <p>This website!</p>
         </ProjectCard>
@@ -131,14 +135,15 @@ import { technologies, nompStack, onlyFoodsStack, portfolioStack } from "@/lib";
         Contact
       </h2>
 
-      <p>Get in touch!</p>
+      <p class="inline-block link after:bg-red-500">
+        <a href="mailto: humphrey@u.nus.edu">Get in touch!</a>
+      </p>
     </section>
   </main>
 </Layout>
 
 <script>
   const cards = document.querySelectorAll(".card");
-  console.log(cards);
 
   const observer = new IntersectionObserver(
     (entries) => {
