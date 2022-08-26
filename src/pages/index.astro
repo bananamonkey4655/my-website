@@ -6,7 +6,7 @@ import { technologies, nompStack, onlyFoodsStack, portfolioStack } from "@/lib";
 ---
 
 <Layout title="Humphrey">
-  <main class="px-6 relative w-full m-auto md:max-w-lg xl:max-w-5xl">
+  <main class="px-6 py-4 relative w-full m-auto md:max-w-lg xl:max-w-5xl">
     <section
       class="card h-screen w-full flex flex-col gap-10 items-center justify-center"
       id="home"
@@ -14,10 +14,7 @@ import { technologies, nompStack, onlyFoodsStack, portfolioStack } from "@/lib";
       <p class="font-headline text-2xl">
         <span>Hi! I'm</span>
 
-        <span
-          class="inline-block py-2 after:w-3/4 after:h-[2px] after:block after:bg-red-400"
-          >Humphrey
-        </span>!
+        <span class="inline-block py-2 title">Humphrey</span>!
       </p>
 
       <img src="/santa-hat.png" alt="Santa" class="w-60 lg:w-full max-w-sm" />
@@ -32,11 +29,15 @@ import { technologies, nompStack, onlyFoodsStack, portfolioStack } from "@/lib";
 
       <div class="text-sm flex flex-col gap-2 font-medium xl:text-lg">
         <p>
-          I'm a 2nd year Computer Science major @ the National University of
-          Singapore! 🎓
+          I'm a <span class="inline-block title after:w-full"
+            >2nd year Computer Science major
+          </span> @ the National University of Singapore! 🎓
         </p>
+
         <p>Developer by day, fishkeeper by night 🐟🐠</p>
+
         <p>On a mission to create meaningful software! 💻</p>
+
         <p>Current obsession: Succession 📺</p>
       </div>
     </section>
