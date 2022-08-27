@@ -44,13 +44,6 @@ export const technologies: Tech[] = [
     description: "Back-end JavaScript runtime environment 🛤️",
   },
   {
-    name: "Astro",
-    fancy: "Astro 🚀",
-    icon: "logos:astro",
-    skill: "library",
-    description: "Static site builder that ships minimal JS 🚀",
-  },
-  {
     name: "Tailwind",
     fancy: "TailwindCSS 🌬",
     icon: "logos:tailwindcss-icon",
@@ -64,6 +57,19 @@ export const technologies: Tech[] = [
     icon: "simple-icons:chakraui",
     skill: "library",
     description: "CSS component library for fast development 🏎️",
+  },
+  {
+    name: "Jest",
+    fancy: "Jest 🧩",
+    icon: "logos:jest",
+    skill: "library",
+  },
+  {
+    name: "Astro",
+    fancy: "Astro 🚀",
+    icon: "logos:astro",
+    skill: "library",
+    description: "Static site builder that ships minimal JS 🚀",
   },
   {
     name: "JavaScript",
