@@ -39,7 +39,7 @@ import { technologies, nompStack, onlyFoodsStack, portfolioStack } from "@/lib";
         <p>On a mission to create meaningful software! 💻</p>
 
         <p>
-          Currently watching: <a class="font-headline link">Succession</a>📺
+          Currently watching: <span class="font-headline">Succession 📺</span>
         </p>
       </div>
     </section>
@@ -137,16 +137,25 @@ import { technologies, nompStack, onlyFoodsStack, portfolioStack } from "@/lib";
       />
     </section>
 
-    <section id="contact" class="card pb-40">
+    <section id="contact" class="card pb-80 flex flex-col gap-4">
       <h2
         class="font-headline font-bold text-xl uppercase after:w-full after:h-[2px] after:bg-slate-400 after:block flex after:m-3"
       >
         Contact
       </h2>
 
-      <p class="inline-block link after:bg-red-500">
-        <a href="mailto: humphrey@u.nus.edu">Get in touch!</a>
+      <p class="text-center font-semibold">
+        Whether you'd like to chat about web development or talk about
+        opportunities, <span class="inline-block title"
+          >feel free to drop me a message!
+        </span>
       </p>
+
+      <a
+        href="mailto: humphrey@u.nus.edu"
+        class="self-center bg-red-100 rounded-md p-2 shadow-xl text-lg font-semibold border-[2px] border-red-300"
+        >📧 Get in touch! 📧
+      </a>
     </section>
   </main>
 </Layout>
