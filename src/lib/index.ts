@@ -103,6 +103,13 @@ export const technologies: Tech[] = [
     icon: "logos:css-3",
     skill: "language",
   },
+  {
+    name: "Zustand",
+    fancy: "Zustand 🐻, (open-source state manager for React) ",
+    icon: "emojione:bear-face",
+    skill: "library",
+    description: "State manager for React 🐻",
+  },
 ];
 
 export const nompStack = technologies.filter((tech) => {
@@ -119,7 +126,8 @@ export const onlyFoodsStack = technologies.filter((tech) => {
     tech.name === "Next.js" ||
     tech.name === "TypeScript" ||
     tech.name === "Chakra UI" ||
-    tech.name === "Tailwind"
+    tech.name === "Tailwind" ||
+    tech.name === "Zustand"
   );
 });
 
