@@ -1,7 +1,15 @@
 ---
+import { Image } from "@astrojs/image/components";
+
 import Layout from "@/layouts/Layout.astro";
 import ProjectCard from "@/components/ProjectCard.astro";
 import SkillCard from "@/components/SkillCard.astro";
+
+import heroImage from "@/assets/santa-hat.png";
+import nompImage from "@/assets/nomp.png";
+import mySiteImage from "@/assets/cool-example.jpg";
+import onlyFoodsImage from "@/assets/onlyfoods.png";
+
 import { technologies, nompStack, onlyFoodsStack, portfolioStack } from "@/lib";
 ---
 
@@ -16,7 +24,8 @@ import { technologies, nompStack, onlyFoodsStack, portfolioStack } from "@/lib";
         <p class="font-semibold px-4">Web Developer</p>
       </div>
 
-      <img src="/santa-hat.png" alt="Santa" class="w-60 lg:w-full max-w-sm" />
+      <Image src={heroImage} height={300} format="avif" />
+      <!-- <img src="/santa-hat.png" alt="Santa" class="w-60 lg:w-full max-w-sm" /> -->
     </section>
 
     <section id="about" class="card pb-10">
@@ -55,10 +64,10 @@ import { technologies, nompStack, onlyFoodsStack, portfolioStack } from "@/lib";
         <ProjectCard
           title="Nomp"
           technologies={nompStack}
-          image="/nomp.png"
           link="https://orbital-nomp.netlify.app/"
           github="https://github.com/bananamonkey4655/nomp"
         >
+          <Image src={nompImage} alt="Nomp" slot="image" format="avif" />
           <h3
             class="text-red-500 font-semibold text-xs uppercase font-headline"
           >
@@ -82,10 +91,12 @@ import { technologies, nompStack, onlyFoodsStack, portfolioStack } from "@/lib";
         <ProjectCard
           title="OnlyFoods"
           technologies={onlyFoodsStack}
-          image="/onlyfoods.png"
           link="https://onlyfoods-blue.vercel.app/"
           github="https://github.com/bananamonkey4655/onlyfoods"
         >
+          <Image src={onlyFoodsImage} alt="OnlyFoods" slot="image" format="avif"
+          />
+
           <p>A web app to search for restaurant listings using keywords.</p>
 
           <p>
@@ -103,10 +114,12 @@ import { technologies, nompStack, onlyFoodsStack, portfolioStack } from "@/lib";
         <ProjectCard
           title="My website"
           technologies={portfolioStack}
-          image="/cool-example.jpg"
           link="/"
           github="https://github.com/bananamonkey4655/astro-test"
         >
+          <Image src={mySiteImage} alt="My website" slot="image" format="avif"
+          />
+
           <p>This website!</p>
 
           <p>Ships with minimal JavaScript!</p>
@@ -137,7 +150,7 @@ import { technologies, nompStack, onlyFoodsStack, portfolioStack } from "@/lib";
       />
     </section>
 
-    <section id="contact" class="card pb-80 flex flex-col gap-4">
+    <section id="contact" class="card py-40 flex flex-col gap-4">
       <h2
         class="font-headline font-bold text-xl uppercase after:w-full after:h-[2px] after:bg-slate-400 after:block flex after:m-3"
       >
