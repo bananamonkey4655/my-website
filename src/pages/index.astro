@@ -16,7 +16,7 @@ import { technologies, nompStack, onlyFoodsStack, portfolioStack } from "@/lib";
 <Layout title="Humphrey">
   <main class="px-6 py-4 relative w-full m-auto md:max-w-lg xl:max-w-5xl">
     <section
-      class="card h-screen w-full flex flex-col gap-10 items-center justify-center"
+      class="h-screen w-full flex flex-col gap-10 items-center justify-center"
       id="home"
     >
       <div class="flex flex-col items-end gap-2">
@@ -60,7 +60,7 @@ import { technologies, nompStack, onlyFoodsStack, portfolioStack } from "@/lib";
         Projects
       </h2>
 
-      <div class="pb-10">
+      <div class="pb-10 card">
         <ProjectCard
           title="Nomp"
           technologies={nompStack}
@@ -87,7 +87,7 @@ import { technologies, nompStack, onlyFoodsStack, portfolioStack } from "@/lib";
         </ProjectCard>
       </div>
 
-      <div class="pb-10">
+      <div class="pb-10 card">
         <ProjectCard
           title="OnlyFoods"
           technologies={onlyFoodsStack}
@@ -110,7 +110,7 @@ import { technologies, nompStack, onlyFoodsStack, portfolioStack } from "@/lib";
         </ProjectCard>
       </div>
 
-      <div class="pb-10">
+      <div class="pb-10 card">
         <ProjectCard
           title="My website"
           technologies={portfolioStack}
@@ -195,12 +195,16 @@ import { technologies, nompStack, onlyFoodsStack, portfolioStack } from "@/lib";
 </script>
 
 <style>
+  section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    margin-top: -70px;
+  }
+
   .card {
     transform: translateY(100px);
     transition: 250ms;
     opacity: 0;
-    padding-top: 70px;
-    margin-top: -70px;
   }
 
   .card.show {
