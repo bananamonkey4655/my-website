@@ -93,6 +93,11 @@ export const technologies: Tech[] = [
     description: "Version control 🦆",
   },
   {
+    name: "Webpack",
+    icon: "logos:webpack",
+    skill: "tool",
+  },
+  {
     name: "MongoDB",
     fancy: "MongoDB 🍀",
     icon: "logos:mongodb",
