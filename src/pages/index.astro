@@ -25,7 +25,6 @@ import { technologies, nompStack, onlyFoodsStack, portfolioStack } from "@/lib";
       </div>
 
       <Image src={heroImage} alt="Santa hat" height={300} format="webp" />
-      <!-- <img src="/santa-hat.png" alt="Santa" class="w-60 lg:w-full max-w-sm" /> -->
     </section>
 
     <section id="about" class="card pb-10">
@@ -97,12 +96,14 @@ import { technologies, nompStack, onlyFoodsStack, portfolioStack } from "@/lib";
           <Image src={onlyFoodsImage} alt="OnlyFoods" slot="image" format="webp"
           />
 
-          <p>A web app to search for restaurant listings using keywords.</p>
+          <p>
+            A Next.js web app to search for restaurant listings using keywords.
+          </p>
 
           <p>
-            Uses SSG (Static Site Generation) to pre-render only a few listings
-            at build time, while server-rendering listings on demand if they
-            don't exist.
+            Uses incremental static regeneration (ISR) to pre-render only a few
+            listings at build time, while server-rendering listings on demand if
+            they don't exist.
           </p>
           <p>
             Pages are cached and served as static sites for future requests.
@@ -212,63 +213,3 @@ import { technologies, nompStack, onlyFoodsStack, portfolioStack } from "@/lib";
     opacity: 1;
   }
 </style>
-
-<!-- <style>
-	:root {
-		--astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
-	}
-
-	h1 {
-		margin: 2rem 0;
-	}
-
-	main {
-		margin: auto;
-		padding: 1em;
-		max-width: 60ch;
-	}
-
-	.text-gradient {
-		font-weight: 900;
-		background-image: var(--astro-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 100% 200%;
-		background-position-y: 100%;
-		border-radius: 0.4rem;
-		animation: pulse 4s ease-in-out infinite;
-	}
-
-	@keyframes pulse {
-		0%,
-		100% {
-			background-position-y: 0%;
-		}
-		50% {
-			background-position-y: 80%;
-		}
-	}
-
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		background: #4f39fa;
-		padding: 1rem;
-		border-radius: 0.4rem;
-		color: var(--color-bg);
-	}
-
-	.instructions code {
-		font-size: 0.875em;
-		border: 0.1em solid var(--color-border);
-		border-radius: 4px;
-		padding: 0.15em 0.25em;
-	}
-
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style> -->
