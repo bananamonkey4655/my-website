@@ -86,13 +86,26 @@ import { technologies, nompStack, onlyFoodsStack, portfolioStack } from "@/lib";
           </p>
 
           <p>
+            Users can create/join a group with their friends, then customize
+            their preferences by providing a location to search for nearby
+            restaurants, and optionally, a type of cuisine, budget, and distance
+            from the given location
+          </p>
+
+          <p>
+            After setting preferences, users will be shown a list of restaurants
+            that they can cast votes for, and the restaurant with the most votes
+            will be picked!
+          </p>
+
+          <p>Works on mobile too!</p>
+
+          <p>
             Uses Socket.io for real-time communication between client and
             server.
           </p>
 
           <p>Auth implemented with JWTs & bcrypt.</p>
-
-          <p>Works on mobile too!</p>
 
           <p>Restaurant data fetched from Yelp API.</p>
         </ProjectCard>
@@ -109,16 +122,20 @@ import { technologies, nompStack, onlyFoodsStack, portfolioStack } from "@/lib";
           />
 
           <p>
-            A Next.js web app to search for restaurant listings using keywords.
+            A Next.js web app to search for restaurant listings using keywords
           </p>
+
+          <p>Shown restaurants can be sorted by price and/or ratings</p>
 
           <p>
             Uses incremental static regeneration (ISR) to pre-render only a few
             listings at build time, while server-rendering listings on demand if
-            they don't exist
+            they don't exist.
           </p>
 
-          <p>Pages are cached and served as static sites for future requests</p>
+          <p>
+            Pages are cached and served as static sites for future requests.
+          </p>
 
           <p>Utilizes Zustand for client-side state management</p>
         </ProjectCard>
