@@ -97,6 +97,8 @@ export const technologies: Tech[] = [
     icon: "logos:webpack",
     skill: "tool",
   },
+  { name: "PostgreSQL", icon: "logos:postgresql", skill: "tool" },
+
   {
     name: "MongoDB",
     fancy: "MongoDB 🍀",
