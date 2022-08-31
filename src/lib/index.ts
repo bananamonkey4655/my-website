@@ -102,7 +102,7 @@ export const technologies: Tech[] = [
   {
     name: "MongoDB",
     fancy: "MongoDB 🍀",
-    icon: "logos:mongodb",
+    icon: "vscode-icons:file-type-mongo",
     skill: "tool",
     description: "NoSQL document-oriented database 💾",
   },
