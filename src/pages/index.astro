@@ -4,10 +4,11 @@ import { Image } from "@astrojs/image/components";
 import Layout from "@/layouts/Layout.astro";
 import ProjectCard from "@/components/ProjectCard.astro";
 import SkillCard from "@/components/SkillCard.astro";
+import Contacts from "@/components/Contacts.astro";
 
 import heroImage from "@/assets/santa-hat.png";
 import nompImage from "@/assets/nomp.png";
-import mySiteImage from "@/assets/cool-example.jpg";
+import mySiteImage from "@/assets/my-website.png";
 import onlyFoodsImage from "@/assets/onlyfoods.png";
 
 import { technologies, nompStack, onlyFoodsStack, portfolioStack } from "@/lib";
@@ -16,15 +17,21 @@ import { technologies, nompStack, onlyFoodsStack, portfolioStack } from "@/lib";
 <Layout title="Humphrey">
   <main class="px-6 py-4 relative w-full m-auto md:max-w-lg xl:max-w-5xl">
     <section
-      class="card h-screen w-full flex flex-col gap-10 items-center justify-center"
+      class="card h-screen w-full flex items-center justify-center"
       id="home"
     >
-      <div class="flex flex-col items-end gap-2">
-        <h1 class="text-red-400 font-bold text-6xl name-header">Humphrey</h1>
-        <p class="font-semibold px-4">Web Developer</p>
-      </div>
+      <div class="flex flex-col items-center justify-center gap-10">
+        <div class="flex flex-col items-end gap-2">
+          <h1 class="text-red-400 font-bold text-6xl name-header">Humphrey</h1>
+          <span class="font-semibold px-4">Web Developer</span>
+        </div>
 
-      <Image src={heroImage} alt="Santa hat" height={300} format="webp" />
+        <Image src={heroImage} alt="Santa hat" height={300} format="webp" />
+
+        <div class="self-end px-8">
+          <Contacts />
+        </div>
+      </div>
     </section>
 
     <section id="about" class="card pb-10">
@@ -148,7 +155,7 @@ import { technologies, nompStack, onlyFoodsStack, portfolioStack } from "@/lib";
         <ProjectCard
           title="My website"
           technologies={portfolioStack}
-          link="/"
+          link="https://humphrey.app"
           github="https://github.com/bananamonkey4655/astro-test"
         >
           <Image src={mySiteImage} alt="My website" slot="image" format="webp"

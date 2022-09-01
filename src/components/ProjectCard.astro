@@ -19,8 +19,9 @@ const { title, technologies, link, github } = Astro.props as Props;
     </h3>
   </div>
 
-  <slot name="image" />
-
+  <div class="border-red-200 border-[2px]">
+    <slot name="image" />
+  </div>
   <ul class="flex gap-2 p-2 h-10 w-full">
     {
       technologies.map((tech) => {

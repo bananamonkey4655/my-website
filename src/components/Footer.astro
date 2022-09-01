@@ -1,32 +1,11 @@
 ---
 import { Icon } from "astro-icon";
+import Contacts from "@/components/Contacts.astro";
 ---
 
 <footer class="bg-slate-200 p-5">
   <div class="flex justify-between items-center max-w-7xl m-auto">
     <span class="font-semibold text-xs">© 2022 — Designed by Humphrey</span>
-    <ul class="flex gap-5">
-      <li class="hover:opacity-60">
-        <a
-          href="https://github.com/bananamonkey4655"
-          target="_blank"
-          rel="noopener noreferrer"
-          ><Icon name="cib:github" height="25px" />
-        </a>
-      </li>
-      <li class="hover:opacity-60">
-        <a
-          href="https://linkedin.com/in/humphrey-cen"
-          target="_blank"
-          rel="noopener noreferrer"
-          ><Icon name="cib:linkedin" height="25px" />
-        </a>
-      </li>
-      <li class="hover:opacity-60">
-        <a href="mailto: humphrey@u.nus.edu"
-          ><Icon name="clarity:email-line" height="25px" />
-        </a>
-      </li>
-    </ul>
+    <Contacts />
   </div>
 </footer>
