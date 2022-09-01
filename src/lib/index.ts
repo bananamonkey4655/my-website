@@ -118,7 +118,8 @@ export const technologies: Tech[] = [
   },
   {
     name: "Zustand",
-    fancy: "Zustand 🐻, (open-source state manager for React) ",
+    fancy:
+      "Zustand 🐻, (open-source state management library for React / Redux alternative) ",
     icon: "emojione:bear-face",
     skill: "library",
     description: "State manager for React 🐻",
