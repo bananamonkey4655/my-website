@@ -2,16 +2,16 @@
 import { Image } from "@astrojs/image/components";
 
 import Layout from "@/layouts/Layout.astro";
-import ProjectCard from "@/components/ProjectCard.astro";
-import SkillCard from "@/components/SkillCard.astro";
-import Contacts from "@/components/Contacts.astro";
 
 import heroImage from "@/assets/santa-hat.png";
-import nompImage from "@/assets/nomp.png";
-import mySiteImage from "@/assets/my-website.png";
-import onlyFoodsImage from "@/assets/onlyfoods.png";
+import { technologies } from "@/lib";
 
-import { technologies, nompStack, onlyFoodsStack, portfolioStack } from "@/lib";
+import About from "@/components/About.astro";
+import SkillCard from "@/components/SkillCard.astro";
+import Contacts from "@/components/Contacts.astro";
+import Nomp from "@/components/projects/Nomp.astro";
+import OnlyFoods from "@/components/projects/OnlyFoods.astro";
+import Humphrey from "@/components/projects/Humphrey.astro";
 ---
 
 <Layout title="Humphrey 🎅">
@@ -35,37 +35,7 @@ import { technologies, nompStack, onlyFoodsStack, portfolioStack } from "@/lib";
     </section>
 
     <section id="about" class="card pb-10">
-      <h2
-        class="font-headline font-bold text-xl uppercase after:w-full after:h-[2px] after:bg-slate-400 after:block flex after:m-3"
-      >
-        About
-      </h2>
-
-      <div class="text-sm flex flex-col gap-2 font-medium xl:text-lg">
-        <p>
-          🎅 Hi, I'm <span class="inline-block title">Humphrey</span>. Welcome
-          to my site! 🎅
-        </p>
-        <p>
-          🎓 I'm a <span class="inline-block title after:w-full"
-            >2nd year Computer Science major
-          </span> @ the National University of Singapore! 🎓
-        </p>
-
-        <p>
-          🌎 I enjoy building websites, as well as keeping up with new and
-          exciting technologies and tools created by open-source communities in
-          the web development space as it continues to evolve. Looking for
-          opportunities to push and challenge myself and get better at my craft!
-        </p>
-
-        <p>
-          🐟 Lately, I've been doing some fishkeeping and watching <span
-            class="font-headline uppercase"
-            >Succession 📺
-          </span>in my free time.
-        </p>
-      </div>
+      <About />
     </section>
 
     <section id="projects" class="card">
@@ -74,98 +44,9 @@ import { technologies, nompStack, onlyFoodsStack, portfolioStack } from "@/lib";
       >
         Projects
       </h2>
-
-      <div class="pb-10 card">
-        <ProjectCard
-          title="Nomp"
-          technologies={nompStack}
-          link="https://orbital-nomp.netlify.app/"
-          github="https://github.com/bananamonkey4655/nomp"
-        >
-          <Image src={nompImage} alt="Nomp" slot="image" format="webp" />
-          <h3
-            class="text-red-500 font-semibold text-xs uppercase font-headline"
-          >
-            Built for CP2106 Independent Software Development Project (Orbital)
-          </h3>
-
-          <p>
-            A single-page-application to help a group of friends decide where to
-            eat using a Tinder-like interface to vote
-          </p>
-
-          <p>
-            Users can create/join a group with their friends, then customize
-            their preferences by providing a location to begin the search, and
-            optionally: a type of cuisine, budget, and maximum distance from the
-            given location
-          </p>
-
-          <p>
-            After setting preferences, users will be shown a list of restaurants
-            that they can cast votes for, and the restaurant with the most votes
-            will be picked!
-          </p>
-
-          <p>Works on mobile too!</p>
-
-          <p>
-            Uses Socket.io for real-time communication between client and
-            server.
-          </p>
-
-          <p>Auth implemented with JWTs & bcrypt.</p>
-
-          <p>Restaurant data fetched from Yelp API.</p>
-        </ProjectCard>
-      </div>
-
-      <div class="pb-10 card">
-        <ProjectCard
-          title="OnlyFoods"
-          technologies={onlyFoodsStack}
-          link="https://onlyfoods-blue.vercel.app/"
-          github="https://github.com/bananamonkey4655/onlyfoods"
-        >
-          <Image src={onlyFoodsImage} alt="OnlyFoods" slot="image" format="webp"
-          />
-
-          <p>
-            A Next.js web app to search for restaurant listings using keywords
-          </p>
-
-          <p>Shown restaurants can be sorted by price and/or ratings.</p>
-
-          <p>
-            Uses incremental static regeneration (ISR) to pre-render only a few
-            listings as static sites at build time, while server-rendering
-            listings on demand if they don't exist.
-          </p>
-
-          <p>
-            Pages are then cached and served as static sites for future
-            requests.
-          </p>
-
-          <p>Utilizes Zustand for client-side state management.</p>
-        </ProjectCard>
-      </div>
-
-      <div class="pb-10 card">
-        <ProjectCard
-          title="My website"
-          technologies={portfolioStack}
-          link="https://humphrey.app"
-          github="https://github.com/bananamonkey4655/astro-test"
-        >
-          <Image src={mySiteImage} alt="My website" slot="image" format="webp"
-          />
-
-          <p>This website!</p>
-
-          <p>Quick to load and ships with minimal JavaScript bundled!</p>
-        </ProjectCard>
-      </div>
+      <Nomp />
+      <OnlyFoods />
+      <Humphrey />
     </section>
 
     <section class="card" id="skills">
@@ -174,17 +55,14 @@ import { technologies, nompStack, onlyFoodsStack, portfolioStack } from "@/lib";
       >
         Skills
       </h2>
-
       <SkillCard
         title="Languages"
         technologies={technologies.filter((tech) => tech.skill === "language")}
       />
-
       <SkillCard
         title="Libraries & Frameworks"
         technologies={technologies.filter((tech) => tech.skill === "library")}
       />
-
       <SkillCard
         title="Tools"
         technologies={technologies.filter((tech) => tech.skill === "tool")}

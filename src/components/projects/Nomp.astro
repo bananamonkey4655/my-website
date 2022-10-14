@@ -1,0 +1,46 @@
+---
+import { Image } from "@astrojs/image/components";
+
+import ProjectCard from "@/components/projects/ProjectCard.astro";
+import nompImage from "@/assets/nomp.png";
+import { nompStack } from "@/lib";
+---
+
+<div class="pb-10 card">
+  <ProjectCard
+    title="Nomp"
+    technologies={nompStack}
+    link="https://orbital-nomp.netlify.app/"
+    github="https://github.com/bananamonkey4655/nomp"
+  >
+    <Image src={nompImage} alt="Nomp" slot="image" format="webp" />
+    <h3 class="text-red-500 font-semibold text-xs uppercase font-headline">
+      Built for CP2106 Independent Software Development Project (Orbital)
+    </h3>
+
+    <p>
+      A single-page-application to help a group of friends decide where to eat
+      using a Tinder-like interface to vote
+    </p>
+
+    <p>
+      Users can create/join a group with their friends, then customize their
+      preferences by providing a location to begin the search, and optionally: a
+      type of cuisine, budget, and maximum distance from the given location
+    </p>
+
+    <p>
+      After setting preferences, users will be shown a list of restaurants that
+      they can cast votes for, and the restaurant with the most votes will be
+      picked!
+    </p>
+
+    <p>Works on mobile too!</p>
+
+    <p>Uses Socket.io for real-time communication between client and server.</p>
+
+    <p>Auth implemented with JWTs & bcrypt.</p>
+
+    <p>Restaurant data fetched from Yelp API.</p>
+  </ProjectCard>
+</div>
