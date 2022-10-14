@@ -15,7 +15,13 @@ import Contacts from "@/components/Contacts.astro";
       <span class="font-semibold px-4">Web Developer</span>
     </div>
 
-    <Image src={heroImage} alt="Santa hat" height={300} format="webp" />
+    <Image
+      src={heroImage}
+      alt="Santa hat"
+      height={300}
+      format="webp"
+      class="motion-safe:hover:animate-[wiggle_1s_ease-in-out_infinite]"
+    />
 
     <div class="self-end px-8">
       <Contacts />

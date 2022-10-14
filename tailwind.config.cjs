@@ -15,6 +15,14 @@ module.exports = {
       ],
       headline: ["Menlo", "Monaco", "Lucida Console", "sans-serif"],
     },
+    extend: {
+      keyframes: {
+        wiggle: {
+          "0%, 100%": { transform: "rotate(0deg)" },
+          "50%": { transform: "rotate(10deg)" },
+        },
+      },
+    },
   },
   plugins: [],
 };
