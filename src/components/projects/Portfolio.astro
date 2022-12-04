@@ -1,0 +1,24 @@
+---
+import { Image } from "@astrojs/image/components";
+
+import ProjectCard from "@/components/projects/ProjectCard.astro";
+import mySiteImage from "@/assets/my-website.png";
+import { portfolioStack } from "@/lib";
+---
+
+<div class="pb-10 card">
+  <ProjectCard
+    title="My website"
+    technologies={portfolioStack}
+    link="https://humphrey.app"
+    github="https://github.com/bananamonkey4655/my-website"
+  >
+    <Image src={mySiteImage} alt="My website" slot="image" format="webp" />
+
+    <p>This website!</p>
+    <p>
+      Built with Astro, a HTML-first web framework for building static sites.
+    </p>
+    <p>Quick to load and ships with minimal JavaScript bundled.</p>
+  </ProjectCard>
+</div>

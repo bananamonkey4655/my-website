@@ -4,6 +4,12 @@ const resumeLink =
 ---
 
 <nav class="font-semibold p-4 bg-white border-b sticky top-0 left-0 z-50">
+  <div
+    id="scroll-progress-bar"
+    class="w-0 bg-red-400 h-[3px] fixed top-0 left-0"
+  >
+  </div>
+
   <div class="flex justify-between items-center m-auto max-w-7xl">
     <h4 class="lowercase link after:bg-red-500">
       <a href="#home">Humphrey</a>
@@ -13,7 +19,7 @@ const resumeLink =
         <a href="#about">About</a>
       </li>
       <li class="link">
-        <a href="#projects">Experience</a>
+        <a href="#projects">Projects</a>
       </li>
       <li class="link">
         <a href="#contact">Contact</a>
@@ -30,3 +36,19 @@ const resumeLink =
     </ul>
   </div>
 </nav>
+
+<script>
+  const scrollProgressBar = document.querySelector(
+    "#scroll-progress-bar"
+  ) as HTMLDivElement | null;
+
+  document.addEventListener("scroll", () => {
+    if (!scrollProgressBar) {
+      return;
+    }
+
+    scrollProgressBar.style.width = `${
+      (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
+    }%`;
+  });
+</script>

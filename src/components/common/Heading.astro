@@ -1,0 +1,13 @@
+---
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props as Props;
+---
+
+<h2
+  class="font-headline font-bold text-xl uppercase after:w-full after:h-[2px] after:bg-slate-400 after:block flex after:m-3"
+>
+  {title}
+</h2>

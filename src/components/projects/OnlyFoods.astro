@@ -1,0 +1,32 @@
+---
+import { Image } from "@astrojs/image/components";
+
+import ProjectCard from "@/components/projects/ProjectCard.astro";
+import onlyFoodsImage from "@/assets/onlyfoods.png";
+import { onlyFoodsStack } from "@/lib";
+---
+
+<div class="pb-10 card">
+  <ProjectCard
+    title="OnlyFoods"
+    technologies={onlyFoodsStack}
+    link="https://onlyfoods-blue.vercel.app/"
+    github="https://github.com/bananamonkey4655/onlyfoods"
+  >
+    <Image src={onlyFoodsImage} alt="OnlyFoods" slot="image" format="webp" />
+
+    <p>A Next.js web app to search for restaurant listings using keywords</p>
+
+    <p>Shown restaurants can be sorted by price and/or ratings.</p>
+
+    <p>
+      Uses incremental static regeneration (ISR) to pre-render only a few
+      listings as static sites at build time, while server-rendering listings on
+      demand if they don't exist.
+    </p>
+
+    <p>Pages are then cached and served as static sites for future requests.</p>
+
+    <p>Utilizes Zustand for client-side state management.</p>
+  </ProjectCard>
+</div>
