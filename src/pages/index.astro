@@ -11,12 +11,12 @@ import About from "@/components/About.astro";
 import SkillCard from "@/components/SkillCard.astro";
 import Nomp from "@/components/projects/Nomp.astro";
 import OnlyFoods from "@/components/projects/OnlyFoods.astro";
-import Humphrey from "@/components/projects/Humphrey.astro";
+import Portfolio from "@/components/projects/Portfolio.astro";
 import Hero from "@/components/Hero.astro";
 ---
 
 <Layout title="Humphrey 🎅">
-  <main class="px-6 py-4 relative w-full m-auto md:max-w-lg xl:max-w-5xl">
+  <main class="px-6 pb-4 relative w-full m-auto md:max-w-lg xl:max-w-5xl">
     <Hero />
 
     <section id="about" class="card pb-10">
@@ -33,8 +33,27 @@ import Hero from "@/components/Hero.astro";
       <article
         class="flex flex-col items-center gap-10 pt-5 bg-stone-100 rounded-xl p-3 relative xl:flex-row"
       >
-        <div class="w-full max-w-md md:max-w-lg rounded-lg overflow-hidden">
-          <Image src={binanceSite} alt="Binance" format="webp" />
+        <div
+          class="w-full max-w-md md:max-w-lg rounded-lg overflow-hidden group relative"
+        >
+          <Image
+            src={binanceSite}
+            alt="Binance"
+            format="webp"
+            class="group-hover:opacity-70 duration-200"
+          />
+          <div
+            class="absolute top-0 left-0 w-full h-0 flex flex-col gap-5 justify-center items-center bg-black opacity-0 group-hover:h-full group-hover:opacity-80 duration-500"
+          >
+            <p class="text-lg text-white px-5 font-semibold">Binance</p>
+            <a
+              class="px-8 py-3 font-semibold rounded-full bg-amber-400 hover:bg-amber-600 duration-300"
+              href="https://twitter.com/binance"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Visit
+            </a>
+          </div>
         </div>
         <div class="flex flex-col gap-3">
           <span>
@@ -64,9 +83,12 @@ import Hero from "@/components/Hero.astro";
       >
         Projects
       </h2>
+
       <Nomp />
+
       <OnlyFoods />
-      <Humphrey />
+
+      <Portfolio />
     </section>
 
     <section class="card" id="skills">

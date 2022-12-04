@@ -2,6 +2,7 @@
 import "@/styles/base.css";
 import Navbar from "@/components/Navbar.astro";
 import Footer from "@/components/Footer.astro";
+
 export interface Props {
   title: string;
 }
@@ -52,9 +53,7 @@ const { title } = Astro.props as Props;
 
   <body id="top">
     <Navbar />
-
     <slot />
-
     <Footer />
   </body>
 </html>
