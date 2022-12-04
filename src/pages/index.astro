@@ -3,8 +3,6 @@ import { Image } from "@astrojs/image/components";
 
 import Layout from "@/layouts/Layout.astro";
 
-import binanceLogo from "@/assets/binance.svg";
-import binanceSite from "@/assets/binance-website.png";
 import { technologies } from "@/lib";
 
 import About from "@/components/About.astro";
@@ -19,11 +17,11 @@ import Hero from "@/components/Hero.astro";
   <main class="px-6 pb-4 relative w-full m-auto md:max-w-lg xl:max-w-5xl">
     <Hero />
 
-    <section id="about" class="card pb-10">
+    <section id="about" class="card pb-10 scroll-my-20">
       <About />
     </section>
 
-    <section id="projects" class="card">
+    <section id="projects" class="card scroll-my-20">
       <h2
         class="font-headline font-bold text-xl uppercase after:w-full after:h-[2px] after:bg-slate-400 after:block flex after:m-3"
       >
@@ -37,7 +35,7 @@ import Hero from "@/components/Hero.astro";
       <Portfolio />
     </section>
 
-    <section class="card" id="skills">
+    <section class="card scroll-my-20" id="skills">
       <h2
         class="flex font-headline font-bold text-xl uppercase after:w-full after:h-[2px] after:bg-slate-400 after:block after:m-3"
       >
@@ -57,7 +55,7 @@ import Hero from "@/components/Hero.astro";
       />
     </section>
 
-    <section id="contact" class="card py-40 flex flex-col gap-4">
+    <section id="contact" class="card scroll-my-20 py-40 flex flex-col gap-4">
       <h2
         class="font-headline font-bold text-xl uppercase after:w-full after:h-[2px] after:bg-slate-400 after:block flex after:m-3"
       >
@@ -99,11 +97,11 @@ import Hero from "@/components/Hero.astro";
 </script>
 
 <style>
-  section {
+  /* section {
     padding-top: 70px;
     padding-bottom: 70px;
     margin-top: -70px;
-  }
+  } */
 
   .card {
     transform: translateY(100px);
