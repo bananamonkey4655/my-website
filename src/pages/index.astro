@@ -23,60 +23,6 @@ import Hero from "@/components/Hero.astro";
       <About />
     </section>
 
-    <section id="experience" class="card">
-      <h2
-        class="font-headline font-bold text-xl uppercase after:w-full after:h-[2px] after:bg-slate-400 after:block flex after:m-3 pb-5"
-      >
-        Experience
-      </h2>
-
-      <article
-        class="flex flex-col items-center gap-10 pt-5 bg-stone-100 rounded-xl p-3 relative xl:flex-row"
-      >
-        <div
-          class="w-full max-w-md md:max-w-lg rounded-lg overflow-hidden group relative"
-        >
-          <Image
-            src={binanceSite}
-            alt="Binance"
-            format="webp"
-            class="group-hover:opacity-70 duration-200"
-          />
-          <div
-            class="absolute top-0 left-0 w-full h-0 flex flex-col gap-5 justify-center items-center bg-black opacity-0 group-hover:h-full group-hover:opacity-80 duration-500"
-          >
-            <p class="text-lg text-white px-5 font-semibold">Binance</p>
-            <a
-              class="px-8 py-3 font-semibold rounded-full bg-amber-400 hover:bg-amber-600 duration-300"
-              href="https://twitter.com/binance"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Visit
-            </a>
-          </div>
-        </div>
-        <div class="flex flex-col gap-3">
-          <span>
-            <img src={binanceLogo} class="h-8" />
-          </span>
-          <div>
-            <h3 class="font-semibold text-lg">
-              Software Engineer Intern @ Binance
-            </h3>
-            <div class="divide-x divide-gray-600 font-light">
-              <span class="pr-2">TBD - Present</span><span class="pl-2"
-                >Singapore
-              </span>
-            </div>
-          </div>
-          <ul class="list-disc px-4">
-            <li>Lorem ipsum</li>
-            <li>Lorem ipsum</li>
-          </ul>
-        </div>
-      </article>
-    </section>
-
     <section id="projects" class="card">
       <h2
         class="font-headline font-bold text-xl uppercase after:w-full after:h-[2px] after:bg-slate-400 after:block flex after:m-3"
@@ -119,10 +65,7 @@ import Hero from "@/components/Hero.astro";
       </h2>
 
       <p class="text-center font-semibold">
-        Whether you'd like to chat or talk about opportunities, <span
-          class="inline-block title"
-          >feel free to drop me a message!
-        </span>
+        <span class="inline-block title">Drop me a message below!</span>
       </p>
 
       <a
