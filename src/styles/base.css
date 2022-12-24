@@ -3,17 +3,22 @@
 @tailwind utilities;
 
 @layer components {
-  .link {
-    @apply relative after:absolute after:w-full after:h-[2px] after:bottom-0 after:left-0 after:bg-slate-600 after:duration-200
+  .link-decor-underline {
+    @apply relative after:absolute after:w-full after:h-[2px] after:bottom-0 after:left-0 after:bg-slate-600 dark:after:bg-red-500 after:duration-200
      after:scale-x-0 after:origin-bottom-left after:ease-out hover:after:scale-x-100 hover:after:origin-bottom-left;
   }
 
-  .name-header {
-    @apply relative after:absolute after:w-full after:h-[4px] after:bottom-0 after:left-0 after:bg-red-500 after:duration-200
+  .hero-name-underline {
+    @apply relative after:absolute after:w-full after:h-[4px] after:bottom-0 after:left-0 after:bg-red-500 dark:after:bg-rose-500 after:duration-200
      after:scale-x-0 after:origin-bottom-left after:ease-out hover:after:scale-x-90 hover:after:origin-bottom-left;
   }
 
-  .title {
-    @apply after:w-3/4 after:h-[2px] after:block after:bg-red-400;
+  .link-decor-underline-75 {
+    @apply after:w-3/4 after:h-[2px] after:block after:bg-red-400 dark:after:bg-red-500;
+  }
+
+  .button-decor-underline {
+    @apply relative after:absolute after:w-full after:h-[2px] after:bottom-0 after:left-0 after:bg-slate-600 dark:after:bg-green-300 after:duration-200
+     after:scale-x-0 after:origin-bottom-left after:ease-out hover:after:scale-x-100 hover:after:origin-bottom-left;
   }
 }

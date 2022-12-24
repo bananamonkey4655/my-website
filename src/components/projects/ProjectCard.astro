@@ -14,15 +14,17 @@ const { title, technologies, link, github } = Astro.props as Props;
 
 <div class="flex flex-col">
   <div>
-    <h3 class="py-2 font-headline uppercase title inline-block md:text-xl">
+    <h3
+      class="py-2 font-headline uppercase link-decor-underline-75 inline-block md:text-xl"
+    >
       {title}
     </h3>
   </div>
 
-  <div class="border-red-200 border-[2px]">
+  <div class="border-red-200 dark:border-red-400 border-[2px]">
     <slot name="image" />
   </div>
-  <ul class="flex gap-2 p-2 h-10 w-full">
+  <ul class="flex gap-2 p-2 h-10 w-full bg-slate-200 dark:bg-slate-600">
     {
       technologies.map((tech) => {
         return (
@@ -37,15 +39,19 @@ const { title, technologies, link, github } = Astro.props as Props;
     }
   </ul>
 
-  <div class="text-sm flex flex-col gap-2 bg-slate-100 p-4">
+  <div class="text-sm flex flex-col gap-2 bg-slate-100 dark:bg-slate-700 p-4">
     <slot />
   </div>
 
   <div class="self-end flex gap-3 xl:gap-5">
-    <div class="bg-red-300 inline-block uppercase font-headline px-1 mt-3 link">
+    <div
+      class="bg-red-300 dark:bg-red-500 inline-block uppercase font-headline px-1 mt-3 button-decor-underline"
+    >
       <a href={link} target="_blank" rel="noopener noreferrer">Visit</a>
     </div>
-    <div class="bg-red-300 inline-block uppercase font-headline px-1 mt-3 link">
+    <div
+      class="bg-red-300 dark:bg-red-500 inline-block uppercase font-headline px-1 mt-3 button-decor-underline"
+    >
       <a href={github} target="_blank" rel="noopener noreferrer">View more</a>
     </div>
   </div>
