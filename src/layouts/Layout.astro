@@ -11,7 +11,7 @@ const { title } = Astro.props as Props;
 ---
 
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth dark">
   <head>
     <title>{title}</title>
     <meta charset="UTF-8" />
@@ -51,7 +51,7 @@ const { title } = Astro.props as Props;
     </script>
   </head>
 
-  <body id="top">
+  <body id="top" class="dark:bg-slate-800 dark:text-white">
     <Navbar />
     <slot />
     <Footer />
