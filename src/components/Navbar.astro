@@ -54,7 +54,9 @@ const isDarkMode = localStorage.getItem("theme") === "dark";
 <script>
   const toggleDarkModeButton = document.querySelector("#toggle-dark");
 
-  const isDarkMode = localStorage.getItem("theme") === "dark";
+  const isDarkMode =
+    localStorage.getItem("theme") === "dark" ||
+    document.documentElement.classList.contains("dark");
   if (isDarkMode) {
     document.getElementById("sun-icon")?.classList.add("hidden");
     document.getElementById("moon-icon")?.classList.remove("hidden");
@@ -65,7 +67,6 @@ const isDarkMode = localStorage.getItem("theme") === "dark";
 
   const toggleDarkMode = () => {
     const isDarkMode = document.documentElement.classList.toggle("dark");
-    console.log("isDarkMode:", isDarkMode);
     localStorage.setItem("theme", isDarkMode ? "dark" : "light");
     toggleDarkModeButton
       ?.querySelectorAll("svg")
