@@ -16,4 +16,9 @@
   .link-decor-underline-75 {
     @apply after:w-3/4 after:h-[2px] after:block after:bg-red-400 dark:after:bg-red-500;
   }
+
+  .button-decor-underline {
+    @apply relative after:absolute after:w-full after:h-[2px] after:bottom-0 after:left-0 after:bg-slate-600 dark:after:bg-green-300 after:duration-200
+     after:scale-x-0 after:origin-bottom-left after:ease-out hover:after:scale-x-100 hover:after:origin-bottom-left;
+  }
 }
