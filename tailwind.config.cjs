@@ -1,3 +1,5 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
@@ -6,13 +8,7 @@ module.exports = {
       DEFAULT: "1px",
     },
     fontFamily: {
-      DEFAULT: [
-        "Inter",
-        "sans-serif",
-        "ui-sans-serif",
-        "system-ui",
-        "sans-serif",
-      ],
+      sans: ["Recoleta-Regular", ...defaultTheme.fontFamily.sans],
       headline: ["Menlo", "Monaco", "Lucida Console", "sans-serif"],
     },
     extend: {
