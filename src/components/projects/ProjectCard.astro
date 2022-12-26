@@ -14,9 +14,7 @@ const { title, technologies, link, github } = Astro.props as Props;
 
 <div class="flex flex-col">
   <div>
-    <h3
-      class="py-2 font-headline uppercase link-decor-underline-75 inline-block md:text-xl"
-    >
+    <h3 class="py-2 uppercase link-decor-underline-75 inline-block md:text-xl">
       {title}
     </h3>
   </div>
@@ -45,12 +43,12 @@ const { title, technologies, link, github } = Astro.props as Props;
 
   <div class="self-end flex gap-3 xl:gap-5">
     <div
-      class="bg-red-300 dark:bg-red-500 inline-block uppercase font-headline px-1 mt-3 button-decor-underline"
+      class="bg-red-300 dark:bg-red-500 inline-block uppercase px-1 mt-3 button-decor-underline"
     >
       <a href={link} target="_blank" rel="noopener noreferrer">Visit</a>
     </div>
     <div
-      class="bg-red-300 dark:bg-red-500 inline-block uppercase font-headline px-1 mt-3 button-decor-underline"
+      class="bg-red-300 dark:bg-red-500 inline-block uppercase px-1 mt-3 button-decor-underline"
     >
       <a href={github} target="_blank" rel="noopener noreferrer">View more</a>
     </div>

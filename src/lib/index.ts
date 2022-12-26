@@ -12,21 +12,21 @@ export const technologies: Tech[] = [
     fancy: "React ⚛️",
     icon: "logos:react",
     skill: "library",
-    description: "Everyone's favourite UI library! 🏝️",
+    description: "UI rendering library 🏝️",
   },
   {
     name: "Next.js",
     fancy: "Next.js ♟",
     icon: "logos:nextjs",
     skill: "library",
-    description: "React framework with great features 🚂",
+    description: "Opinionated react framework 🚂",
   },
   {
     name: "TypeScript",
     fancy: "TypeScript 🌊",
     icon: "logos:typescript-icon",
     skill: "language",
-    description: "JS with types! 🌊",
+    description: "JS with better DX 🌊",
   },
 
   {
@@ -48,7 +48,7 @@ export const technologies: Tech[] = [
     fancy: "TailwindCSS 🌬",
     icon: "logos:tailwindcss-icon",
     skill: "library",
-    description: "Utility in-line CSS framework 🌬",
+    description: "Utility inline CSS 🌬",
   },
 
   {
@@ -57,12 +57,6 @@ export const technologies: Tech[] = [
     icon: "simple-icons:chakraui",
     skill: "library",
     description: "CSS component library for fast development 🏎️",
-  },
-  {
-    name: "Jest",
-    fancy: "Jest 🧩",
-    icon: "logos:jest",
-    skill: "library",
   },
   {
     name: "Astro",
@@ -76,7 +70,7 @@ export const technologies: Tech[] = [
     fancy: "JavaScript",
     icon: "logos:javascript",
     skill: "language",
-    description: "Language of the web! 🌎",
+    description: "Language of the web 🌎",
   },
   {
     name: "Java",
@@ -98,7 +92,6 @@ export const technologies: Tech[] = [
     skill: "tool",
   },
   { name: "PostgreSQL", icon: "logos:postgresql", skill: "tool" },
-
   {
     name: "MongoDB",
     fancy: "MongoDB 🍀",
@@ -117,12 +110,11 @@ export const technologies: Tech[] = [
     skill: "language",
   },
   {
-    name: "Zustand",
-    fancy:
-      "Zustand 🐻, (open-source state management library for React / Redux alternative) ",
-    icon: "emojione:bear-face",
+    name: "Redux",
+    fancy: "Redux ",
+    icon: "logos:redux",
     skill: "library",
-    description: "State manager for React 🐻",
+    description: "State management library",
   },
 ];
 

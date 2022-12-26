@@ -15,10 +15,18 @@ import { portfolioStack } from "@/lib";
   >
     <Image src={mySiteImage} alt="My website" slot="image" format="webp" />
 
-    <p>This website!</p>
-    <p>
-      Built with Astro, a HTML-first web framework for building static sites.
+    <p class="text-[18px] pb-4">
+      A website to showcase my work. (This website!)
     </p>
-    <p>Quick to load and ships with minimal JavaScript bundled.</p>
+
+    <section class="flex flex-col gap-1 pb-4">
+      <p>
+        Built with Astro, a HTML-first web framework for building static sites.
+      </p>
+    </section>
+
+    <section class="flex flex-col gap-1 pb-4">
+      <p>Quick to load and ships with minimal JavaScript bundled.</p>
+    </section>
   </ProjectCard>
 </div>
