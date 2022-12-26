@@ -8,7 +8,7 @@ module.exports = {
       DEFAULT: "1px",
     },
     fontFamily: {
-      sans: ["Recoleta-Regular", ...defaultTheme.fontFamily.sans],
+      sans: ["Recoleta", ...defaultTheme.fontFamily.sans],
       headline: ["Menlo", "Monaco", "Lucida Console", "sans-serif"],
     },
     extend: {
